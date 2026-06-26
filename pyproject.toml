@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "starter_build_backend"
+backend-path = ["build_backend"]
+
+[project]
+name = "sandbox-starter"
+version = "0.1.0"
+description = "Boilerplate Python package for Sandbox Agent business logic."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+starter-run = "sandbox_starter.runner:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+sandbox_starter = ["py.typed"]
